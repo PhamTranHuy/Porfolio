@@ -4,7 +4,7 @@ import Navigation from './Navigation/Navigation'
 function Header() {
     return (
         <header className="layout-max-w flex-between">
-            <div>logo</div>
+            <div className='text-sm'><span className='text-2xl font-bold'>H</span>Myopic</div>
             <Navigation />
         </header>
     )

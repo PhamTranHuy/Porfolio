@@ -4,7 +4,8 @@ import Welcome from './Welcome/Welcome';
 import Role from './Welcome/Role';
 
 const background_imgs = ['/About/bg-1.jpg', '/About/bg-2.jpg', '/About/bg-3.jpg'];
-const welcome_bottom_ratio = '45%';
+const welcome_bottom_ratio = '40%';
+
 function About() {
     return (
         <div id='about-section' className='relative w-screen h-screen'>

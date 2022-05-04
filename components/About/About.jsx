@@ -14,17 +14,17 @@ function About() {
             >
                 <SwiperSlide>
                     <div className="absolute inset-0 
-                        bg-cover bg-[url('/About/bg-2.jpg')]" 
+                        bg-cover bg-center bg-[url('/About/bg-1.jpg')]" 
                         data-swiper-parallax={'80%'}/>
-                    <span class="block absolute inset-0 opacity-30 bg-dark" aria-hidden="true"></span>
+                    <span class="block absolute inset-0 opacity-30 bg-black" aria-hidden="true"></span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="absolute inset-0 bg-cover bg-[url('/About/bg-1.jpg')]" data-swiper-parallax={'80%'}/>
-                    <span class="block absolute inset-0 opacity-30 bg-dark" aria-hidden="true"></span>
+                    <div className="absolute inset-0 bg-cover bg-bottom bg-[url('/About/bg-2.jpg')]" data-swiper-parallax={'80%'}/>
+                    <span class="block absolute inset-0 opacity-30 bg-black" aria-hidden="true"></span>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="absolute inset-0 bg-cover bg-[url('/About/bg-3.jpg')]" data-swiper-parallax={'80%'}/>
-                    <span class="block absolute inset-0 opacity-30 bg-dark" aria-hidden="true"></span>
+                    <div className="absolute inset-0 bg-cover bg-center bg-[url('/About/bg-3.jpg')]" data-swiper-parallax={'80%'}/>
+                    <span class="block absolute inset-0 opacity-30 bg-black" aria-hidden="true"></span>
                 </SwiperSlide>
             </Swiper>
         </div>

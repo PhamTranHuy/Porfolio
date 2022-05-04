@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Parallax } from 'swiper';
 
+const background_imgs = ['/About/bg-1.jpg', '/About/bg-2.jpg', '/About/bg-3.jpg'];
+
 function About() {
     return (
         <div id='about-section' className='w-screen h-screen'>
@@ -12,20 +14,17 @@ function About() {
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             >
-                <SwiperSlide>
-                    <div className="absolute inset-0 
-                        bg-cover bg-center bg-[url('/About/bg-1.jpg')]" 
-                        data-swiper-parallax={'80%'}/>
-                    <span class="block absolute inset-0 opacity-30 bg-black" aria-hidden="true"></span>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="absolute inset-0 bg-cover bg-bottom bg-[url('/About/bg-2.jpg')]" data-swiper-parallax={'80%'}/>
-                    <span class="block absolute inset-0 opacity-30 bg-black" aria-hidden="true"></span>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="absolute inset-0 bg-cover bg-center bg-[url('/About/bg-3.jpg')]" data-swiper-parallax={'80%'}/>
-                    <span class="block absolute inset-0 opacity-30 bg-black" aria-hidden="true"></span>
-                </SwiperSlide>
+                {
+                    background_imgs.map((imgUrl, index) => (
+                        <SwiperSlide key={index}>
+                            <div style={{backgroundImage: `url(${imgUrl})`}}
+                                className='absolute inset-0 
+                                    bg-cover bg-center'
+                                data-swiper-parallax={'80%'}/>
+                            <span className="block absolute inset-0 opacity-30 bg-black" aria-hidden="true"></span>
+                        </SwiperSlide>
+                    ))
+                }
             </Swiper>
         </div>
     )

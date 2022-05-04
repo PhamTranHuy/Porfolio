@@ -34,4 +34,7 @@ a {
     .flex-between {
         @apply flex justify-between items-center
     }
+    .bg-gradient-primary {
+        @apply bg-gradient-to-l from-[#12c2e9] via-[#c471ed] to-[#f64f59]
+    }
 }

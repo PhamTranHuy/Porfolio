@@ -1,6 +1,9 @@
+import About from "../components/About/About";
 
 export default function Home() {
     return (
-        <div className="p-5">home</div>
+        <div>
+            <About />
+        </div>
     )
 }

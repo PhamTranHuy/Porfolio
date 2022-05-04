@@ -1,0 +1,9 @@
+@import 'swiper/scss';
+
+#about-section {
+    .swiper-slide {
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+}

@@ -1,15 +1,21 @@
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Parallax } from 'swiper';
 import Welcome from './Welcome/Welcome';
 import Role from './Welcome/Role';
 
 const background_imgs = ['/About/bg-1.jpg', '/About/bg-2.jpg', '/About/bg-3.jpg'];
-const welcome_bottom_ratio = '40%';
 
 function About() {
+    const [roleTitlePosition, setRoleTitlePosition] = useState();
+
+    const handleWelcomeMount = (roleTitlePosition) => {
+        console.log(roleTitlePosition);
+        setRoleTitlePosition(roleTitlePosition);
+    }
     return (
         <div id='about-section' className='relative w-screen h-screen'>
-            <Welcome bottomRatio={welcome_bottom_ratio} />
+            <Welcome onMount={handleWelcomeMount} />
             <Swiper
                 modules={[Parallax]}
                 slidesPerView={1}
@@ -23,7 +29,7 @@ function About() {
                             <div style={{backgroundImage: `url(${imgUrl})`}}
                                 className='absolute inset-0 bg-cover bg-center'
                                 data-swiper-parallax={'80%'}>
-                                <Role bottomRatio={welcome_bottom_ratio}/>
+                                <Role titlePosition={roleTitlePosition} />
                                 <span className="block absolute inset-0 z-[1] opacity-30 bg-black" aria-hidden="true"></span>
                             </div>
                         </SwiperSlide>
